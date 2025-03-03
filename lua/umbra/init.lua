@@ -13,12 +13,11 @@ local function highlight(group, opts)
 end
 
 function M.setup()
-  -- Reset all highlights
-  vim.cmd("highlight clear")
-  if vim.fn.exists("syntax_on") then
+  vim.opt.termguicolors = true
+  if vim.g.colors_name then
+    vim.cmd("hi clear")
     vim.cmd("syntax reset")
   end
-  vim.o.termguicolors = true
   vim.g.colors_name = "umbra"
 
   -- Editor highlights
