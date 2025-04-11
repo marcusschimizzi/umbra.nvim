@@ -1,1 +1,2 @@
-require("umbra").setup()
+package.loaded["umbra.palette"] = nil
+require("umbra").colorscheme()
